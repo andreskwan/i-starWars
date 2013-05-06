@@ -11,7 +11,7 @@
 @implementation KWCharacterModel : NSObject
 
 #pragma mark - Class Methods
-+(id) characterWithFirstName: (NSString *) aFirstName
++(id) characterModelWithFirstName: (NSString *) aFirstName
                lastName: (NSString *) aLastName
                   alias: (NSString *) anAlias
                wikiPage: (NSURL *) aWikiPage
@@ -28,7 +28,7 @@
 }
 
 
-+(id) characterWithAlias: (NSString *) anAlias
++(id) characterModelWithAlias: (NSString *) anAlias
                 wikiPage: (NSURL *) aWikiPage
                soundData: (NSData *) aSoundData
                    photo: (UIImage *) aPhoto

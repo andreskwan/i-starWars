@@ -27,5 +27,6 @@
     
     //sincronizamos controlador y vistas
     //how to communicate with the view
+    self.photoView.image = self.model.photo;
 }
 @end

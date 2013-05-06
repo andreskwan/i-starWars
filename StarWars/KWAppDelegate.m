@@ -7,7 +7,7 @@
 //
 
 #import "KWAppDelegate.h"
-
+#import "KWCharacterModel.h"
 @implementation KWAppDelegate
 
 //method from the delegate
@@ -17,6 +17,25 @@
     //
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
+    ////////////////////////////////////
+    //creamos modelo
+    
+    NSURL *vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
+    
+    NSData *vaderSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"vader"
+                                                                              withExtension:@"caf"]];
+    UIImage *vaderImage = [UIImage imageNamed:@"darthVader"];
+    // creamos un controlador
+    KWCharacterModel * vader = [KWCharacterModel characterModelWithFirstName:@"Anakin"
+                                                                    lastName:@"Skywalker"
+                                                                       alias:@"Darth Vader"
+                                                                    wikiPage:vaderURL
+                                                                   soundData:vaderSound
+                                                                       photo:vaderImage];
+    ////////////////////////////////////
+    //creamos el controlador
+    
     self.window.backgroundColor = [UIColor orangeColor];
     [self.window makeKeyAndVisible];
     return YES;
