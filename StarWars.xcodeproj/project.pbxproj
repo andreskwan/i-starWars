@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA5A9F5E173830240059AC5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5A9F5D173830240059AC5E /* UIKit.framework */; };
+		EA5A9F60173830240059AC5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5A9F5F173830240059AC5E /* Foundation.framework */; };
+		EA5A9F62173830240059AC5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5A9F61173830240059AC5E /* CoreGraphics.framework */; };
+		EA5A9F68173830240059AC5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F66173830240059AC5E /* InfoPlist.strings */; };
+		EA5A9F6A173830240059AC5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A9F69173830240059AC5E /* main.m */; };
+		EA5A9F6E173830240059AC5E /* KWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A9F6D173830240059AC5E /* KWAppDelegate.m */; };
+		EA5A9F70173830240059AC5E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F6F173830240059AC5E /* Default.png */; };
+		EA5A9F72173830240059AC5E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F71173830240059AC5E /* Default@2x.png */; };
+		EA5A9F74173830240059AC5E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F73173830240059AC5E /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA5A9F5A173830240059AC5E /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5A9F5D173830240059AC5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA5A9F5F173830240059AC5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA5A9F61173830240059AC5E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA5A9F65173830240059AC5E /* StarWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StarWars-Info.plist"; sourceTree = "<group>"; };
+		EA5A9F67173830240059AC5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA5A9F69173830240059AC5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA5A9F6B173830240059AC5E /* StarWars-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StarWars-Prefix.pch"; sourceTree = "<group>"; };
+		EA5A9F6C173830240059AC5E /* KWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWAppDelegate.h; sourceTree = "<group>"; };
+		EA5A9F6D173830240059AC5E /* KWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWAppDelegate.m; sourceTree = "<group>"; };
+		EA5A9F6F173830240059AC5E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EA5A9F71173830240059AC5E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EA5A9F73173830240059AC5E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA5A9F57173830240059AC5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5A9F5E173830240059AC5E /* UIKit.framework in Frameworks */,
+				EA5A9F60173830240059AC5E /* Foundation.framework in Frameworks */,
+				EA5A9F62173830240059AC5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA5A9F51173830240059AC5E = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F63173830240059AC5E /* StarWars */,
+				EA5A9F5C173830240059AC5E /* Frameworks */,
+				EA5A9F5B173830240059AC5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA5A9F5B173830240059AC5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F5A173830240059AC5E /* StarWars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA5A9F5C173830240059AC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F5D173830240059AC5E /* UIKit.framework */,
+				EA5A9F5F173830240059AC5E /* Foundation.framework */,
+				EA5A9F61173830240059AC5E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA5A9F63173830240059AC5E /* StarWars */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F6C173830240059AC5E /* KWAppDelegate.h */,
+				EA5A9F6D173830240059AC5E /* KWAppDelegate.m */,
+				EA5A9F64173830240059AC5E /* Supporting Files */,
+			);
+			path = StarWars;
+			sourceTree = "<group>";
+		};
+		EA5A9F64173830240059AC5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F65173830240059AC5E /* StarWars-Info.plist */,
+				EA5A9F66173830240059AC5E /* InfoPlist.strings */,
+				EA5A9F69173830240059AC5E /* main.m */,
+				EA5A9F6B173830240059AC5E /* StarWars-Prefix.pch */,
+				EA5A9F6F173830240059AC5E /* Default.png */,
+				EA5A9F71173830240059AC5E /* Default@2x.png */,
+				EA5A9F73173830240059AC5E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA5A9F59173830240059AC5E /* StarWars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5A9F77173830240059AC5E /* Build configuration list for PBXNativeTarget "StarWars" */;
+			buildPhases = (
+				EA5A9F56173830240059AC5E /* Sources */,
+				EA5A9F57173830240059AC5E /* Frameworks */,
+				EA5A9F58173830240059AC5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWars;
+			productName = StarWars;
+			productReference = EA5A9F5A173830240059AC5E /* StarWars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA5A9F52173830240059AC5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KW;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Kwan;
+			};
+			buildConfigurationList = EA5A9F55173830240059AC5E /* Build configuration list for PBXProject "StarWars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA5A9F51173830240059AC5E;
+			productRefGroup = EA5A9F5B173830240059AC5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA5A9F59173830240059AC5E /* StarWars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA5A9F58173830240059AC5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5A9F68173830240059AC5E /* InfoPlist.strings in Resources */,
+				EA5A9F70173830240059AC5E /* Default.png in Resources */,
+				EA5A9F72173830240059AC5E /* Default@2x.png in Resources */,
+				EA5A9F74173830240059AC5E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA5A9F56173830240059AC5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5A9F6A173830240059AC5E /* main.m in Sources */,
+				EA5A9F6E173830240059AC5E /* KWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA5A9F66173830240059AC5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5A9F67173830240059AC5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA5A9F75173830240059AC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		EA5A9F76173830240059AC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA5A9F78173830240059AC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StarWars/StarWars-Prefix.pch";
+				INFOPLIST_FILE = "StarWars/StarWars-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA5A9F79173830240059AC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StarWars/StarWars-Prefix.pch";
+				INFOPLIST_FILE = "StarWars/StarWars-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA5A9F55173830240059AC5E /* Build configuration list for PBXProject "StarWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5A9F75173830240059AC5E /* Debug */,
+				EA5A9F76173830240059AC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5A9F77173830240059AC5E /* Build configuration list for PBXNativeTarget "StarWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5A9F78173830240059AC5E /* Debug */,
+				EA5A9F79173830240059AC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA5A9F52173830240059AC5E /* Project object */;
+}
