@@ -20,6 +20,20 @@
 //manipulate but do not display
 @property (strong, nonatomic) UIImage  *photo;
 
++(id) characterWithFirstName: (NSString *) aFirstName
+                    lastName: (NSString *) aLastName
+                       alias: (NSString *) anAlias
+                    wikiPage: (NSURL *) aWikiPage
+                   soundData: (NSData *) aSoundData
+                       photo: (UIImage *) aPhoto;
+
+//ctrl + i to indent
++(id) characterWithAlias: (NSString *) anAlias
+                wikiPage: (NSURL *) aWikiPage
+               soundData: (NSData *) aSoundData
+                   photo: (UIImage *) aPhoto;
+
+
 -(id) initWithFirstName: (NSString *) aFirstName
                lastName: (NSString *) aLastName
                   alias: (NSString *) anAlias
