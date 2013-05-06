@@ -8,13 +8,11 @@
 
 #import "KWCharacterViewController.h"
 
-@interface KWCharacterViewController ()
-
-@end
-
 @implementation KWCharacterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//different languages
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {

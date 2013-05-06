@@ -59,7 +59,6 @@
 		EA5A9F51173830240059AC5E = {
 			isa = PBXGroup;
 			children = (
-				EA5A9F86173840BD0059AC5E /* Controller */,
 				EA5A9F63173830240059AC5E /* StarWars */,
 				EA5A9F5C173830240059AC5E /* Frameworks */,
 				EA5A9F5B173830240059AC5E /* Products */,
@@ -87,6 +86,7 @@
 		EA5A9F63173830240059AC5E /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				EA5A9F86173840BD0059AC5E /* Controller */,
 				EA5A9F7D1738395A0059AC5E /* models */,
 				EA5A9F6C173830240059AC5E /* KWAppDelegate.h */,
 				EA5A9F6D173830240059AC5E /* KWAppDelegate.m */,
@@ -126,6 +126,7 @@
 				EA5A9F83173840AD0059AC5E /* KWCharacterViewController.xib */,
 			);
 			name = Controller;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
