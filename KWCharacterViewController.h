@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KWCharacterModel.h"
+
 
 @interface KWCharacterViewController : UIViewController
+
+@property (strong, nonatomic) KWCharacterModel   *model;
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
 @end

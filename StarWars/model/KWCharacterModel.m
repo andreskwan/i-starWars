@@ -59,7 +59,7 @@
     return self;
 }
 
--(id) initAlias: (NSString *) anAlias
+-(id) initWithAlias: (NSString *) anAlias
                wikiPage: (NSURL *) aWikiPage
               soundData: (NSData *) aSoundData
                   photo: (UIImage *) aPhoto

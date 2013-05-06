@@ -10,27 +10,22 @@
 
 @implementation KWCharacterViewController
 
-//different languages
-- (id)initWithNibName:(NSString *)nibNameOrNil
-               bundle:(NSBundle *)nibBundleOrNil
+//add a property to allowme to communitcate with the model
+
+-(id) initWithModel: (KWCharacterModel *) aModel
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithNibName:nil
+                               bundle:nil]) {
+        _model = aModel;
     }
     return self;
 }
 
-- (void)viewDidLoad
+-(void) viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [super viewWillAppear:animated];
+    
+    //sincronizamos controlador y vistas
+    //how to communicate with the view
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
