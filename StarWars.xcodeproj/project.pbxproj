@@ -16,6 +16,7 @@
 		EA5A9F70173830240059AC5E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F6F173830240059AC5E /* Default.png */; };
 		EA5A9F72173830240059AC5E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F71173830240059AC5E /* Default@2x.png */; };
 		EA5A9F74173830240059AC5E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5A9F73173830240059AC5E /* Default-568h@2x.png */; };
+		EA5A9F7C173839510059AC5E /* KWCharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A9F7B173839510059AC5E /* KWCharacterModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		EA5A9F6F173830240059AC5E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EA5A9F71173830240059AC5E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EA5A9F73173830240059AC5E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EA5A9F7A173839510059AC5E /* KWCharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWCharacterModel.h; path = model/KWCharacterModel.h; sourceTree = "<group>"; };
+		EA5A9F7B173839510059AC5E /* KWCharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWCharacterModel.m; path = model/KWCharacterModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		EA5A9F63173830240059AC5E /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				EA5A9F7D1738395A0059AC5E /* models */,
 				EA5A9F6C173830240059AC5E /* KWAppDelegate.h */,
 				EA5A9F6D173830240059AC5E /* KWAppDelegate.m */,
 				EA5A9F64173830240059AC5E /* Supporting Files */,
@@ -97,6 +101,15 @@
 				EA5A9F73173830240059AC5E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA5A9F7D1738395A0059AC5E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A9F7A173839510059AC5E /* KWCharacterModel.h */,
+				EA5A9F7B173839510059AC5E /* KWCharacterModel.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +180,7 @@
 			files = (
 				EA5A9F6A173830240059AC5E /* main.m in Sources */,
 				EA5A9F6E173830240059AC5E /* KWAppDelegate.m in Sources */,
+				EA5A9F7C173839510059AC5E /* KWCharacterModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
