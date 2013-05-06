@@ -16,7 +16,7 @@
 
 +(id) cafPlayer{
     // Un inicializador de clase. Lo usamos por comodidad.
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 -(void) playSoundData: (NSData *) data{

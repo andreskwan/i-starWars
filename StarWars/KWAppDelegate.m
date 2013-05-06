@@ -8,6 +8,7 @@
 
 #import "KWAppDelegate.h"
 #import "KWCharacterModel.h"
+#import "KWCharacterViewController.h"
 @implementation KWAppDelegate
 
 //method from the delegate
@@ -25,16 +26,23 @@
     
     NSData *vaderSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"vader"
                                                                               withExtension:@"caf"]];
-    UIImage *vaderImage = [UIImage imageNamed:@"darthVader"];
+    UIImage *vaderImage = [UIImage imageNamed:@"darthVader.jpg"];
     // creamos un controlador
     KWCharacterModel * vader = [KWCharacterModel characterModelWithFirstName:@"Anakin"
                                                                     lastName:@"Skywalker"
-                                                                       alias:@"Darth Vader"
+                                                                       alias:@"DarthVader"
                                                                     wikiPage:vaderURL
                                                                    soundData:vaderSound
                                                                        photo:vaderImage];
+    
     ////////////////////////////////////
     //creamos el controlador
+    KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
+    
+    //mostramos en pantalla
+    
+    [[self window] setRootViewController:charVC];
+    
     
     self.window.backgroundColor = [UIColor orangeColor];
     [self.window makeKeyAndVisible];

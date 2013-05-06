@@ -7,11 +7,12 @@
 //
 
 #import "KWCharacterViewController.h"
+#import "CafPlayer.h"
 
 @implementation KWCharacterViewController
 
-//add a property to allowme to communitcate with the model
 
+//add a property to allowme to communitcate with the model
 -(id) initWithModel: (KWCharacterModel *) aModel
 {
     if (self = [super initWithNibName:nil
@@ -28,5 +29,12 @@
     //sincronizamos controlador y vistas
     //how to communicate with the view
     self.photoView.image = self.model.photo;
+}
+
+#pragma mark - Actions
+-(IBAction)playSound:(id)sender
+{
+    self.player = [CafPlayer cafPlayer];
+    [self.player playSoundData:self.model.soundData];
 }
 @end
