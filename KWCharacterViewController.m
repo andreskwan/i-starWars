@@ -8,6 +8,7 @@
 
 #import "KWCharacterViewController.h"
 #import "CafPlayer.h"
+#import "KWWikiViewController.h"
 
 @implementation KWCharacterViewController
 
@@ -28,6 +29,7 @@
     
     //sincronizamos controlador y vistas
     //how to communicate with the view
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0 blue:0.15 alpha:1];
     self.photoView.image = self.model.photo;
 }
 
@@ -36,5 +38,13 @@
 {
     self.player = [CafPlayer cafPlayer];
     [self.player playSoundData:self.model.soundData];
+    
+    
+}
+
+-(IBAction)displayWiki:(id)sender
+{
+    KWWikiViewController * wikiVC = [[KWWikiViewController alloc] initWithModel:self.model];
+    [self.navigationController pushViewController:wikiVC animated:YES];
 }
 @end

@@ -19,4 +19,5 @@
 -(id) initWithModel: (KWCharacterModel *) aModel;
 
 -(IBAction)playSound:(id)sender;
+-(IBAction)displayWiki:(id)sender;
 @end
