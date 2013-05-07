@@ -23,6 +23,8 @@
     //////////////////////////////////////
     // configurar appearance
     [self configureAppearance];
+    
+    
     ////////////////////////////////////
     //creamos modelo
     NSURL *vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
