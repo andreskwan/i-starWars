@@ -36,13 +36,18 @@
     
     ////////////////////////////////////
     // creamos un controlador
-//    KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
+    KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
     
     KWWikiViewController * wikiVC = [[KWWikiViewController alloc]initWithModel:vader];
+  
+    
+    ////////////////////////////////////
+  //creamos el combinador
+    UITabBarController *tabVC  = [[UITabBarController alloc]init];
+    [tabVC setViewControllers:@[charVC,wikiVC]];
     ////////////////////////////////////
     //mostramos en pantalla
-//    [[self window] setRootViewController:charVC];
-        [[self window] setRootViewController:wikiVC];
+    [[self window] setRootViewController:tabVC];
     
     
     self.window.backgroundColor = [UIColor orangeColor];
