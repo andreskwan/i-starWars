@@ -47,7 +47,7 @@
         ////////////////////////////////////
         //creamos modelo
         NSURL *chewieURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Chewbacca"];
-        NSData *chewieSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"chewie"
+        NSData *chewieSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"chewbacca"
                                                                                    withExtension:@"caf"]];
         UIImage *chewieImage = [UIImage imageNamed:@"chewbacca.jpg"];
         
@@ -86,7 +86,7 @@
         ////////////////////////////////////
         //creamos modelo
         NSURL *r2d2URL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/r2d2"];
-        NSData *r2d2Sound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"r2d2"
+        NSData *r2d2Sound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"r2-d2"
                                                                                       withExtension:@"caf"]];
         UIImage *r2d2Image = [UIImage imageNamed:@"R2-D2.jpg"];
         

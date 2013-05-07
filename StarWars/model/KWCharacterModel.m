@@ -65,8 +65,8 @@
               photo: (UIImage *) aPhoto
 {
     if (self = [super init]) {
-        _firstName = nil;
-        _lastName  = nil;
+        _firstName = @" ";
+        _lastName  = @" ";
         _alias     = anAlias;
         _wikiPage  = aWikiPage;
         _soundData = aSoundData;

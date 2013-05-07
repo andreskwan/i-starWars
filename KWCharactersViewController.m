@@ -8,6 +8,7 @@
 
 #import "KWCharactersViewController.h"
 #import "KWCharactersModel.h"
+#import "KWCharacterViewController.h"
 
 @interface KWCharactersViewController ()
 @property (nonatomic, strong) KWCharactersModel * model;
@@ -53,6 +54,16 @@
 }
 
 #pragma mark - Table view data source
+
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
+    if (section == IMPERIAL_SECTION) {
+        return @"Imperials";
+    } else {
+        return @"Rebels";
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -145,11 +156,26 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Averigumos de que personaje se trata
+    KWCharacterModel *character = nil;
+    if (indexPath.section == IMPERIAL_SECTION) {
+        character = [self.model imperialCharacterAtIndex:indexPath.row];
+    } else {
+        character = [self.model rebelCharacterAtIndex:indexPath.row];
+    
+    }
+    
+    //creamos el controller
+    KWCharacterViewController *charVC = [[KWCharacterViewController alloc]initWithModel:character];
+    
+    //hacemos el push
+    [self.navigationController pushViewController:charVC animated:YES];
     // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+      *detailViewController = [[ alloc] initWithNibName:@" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];

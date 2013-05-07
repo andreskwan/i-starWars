@@ -94,6 +94,14 @@
                                          blue:0.15
                                         alpha:1];
     [[UINavigationBar appearance]setTintColor:darkBlue];
+    
     [[UIToolbar appearance]setTintColor:darkBlue];
+    
+    UIColor *reallyDarkerBlue = [UIColor colorWithRed:0
+                                                green:0
+                                                 blue:0.05
+                                                alpha:1];
+    
+    [[UITableViewHeaderFooterView appearance] setTintColor:reallyDarkerBlue];
 }
 @end
