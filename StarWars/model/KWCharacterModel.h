@@ -21,17 +21,17 @@
 @property (strong, nonatomic) UIImage  *photo;
 
 +(id) characterModelWithFirstName: (NSString *) aFirstName
-                    lastName: (NSString *) aLastName
-                       alias: (NSString *) anAlias
-                    wikiPage: (NSURL *) aWikiPage
-                   soundData: (NSData *) aSoundData
-                       photo: (UIImage *) aPhoto;
+                         lastName: (NSString *) aLastName
+                            alias: (NSString *) anAlias
+                         wikiPage: (NSURL *) aWikiPage
+                        soundData: (NSData *) aSoundData
+                            photo: (UIImage *) aPhoto;
 
-//ctrl + i to indent
+
 +(id) characterModelWithAlias: (NSString *) anAlias
-                wikiPage: (NSURL *) aWikiPage
-               soundData: (NSData *) aSoundData
-                   photo: (UIImage *) aPhoto;
+                     wikiPage: (NSURL *) aWikiPage
+                    soundData: (NSData *) aSoundData
+                        photo: (UIImage *) aPhoto;
 
 
 -(id) initWithFirstName: (NSString *) aFirstName

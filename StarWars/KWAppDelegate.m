@@ -21,13 +21,11 @@
 
     ////////////////////////////////////
     //creamos modelo
-    
     NSURL *vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
-    
     NSData *vaderSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"vader"
                                                                               withExtension:@"caf"]];
     UIImage *vaderImage = [UIImage imageNamed:@"darthVader.jpg"];
-    // creamos un controlador
+
     KWCharacterModel * vader = [KWCharacterModel characterModelWithFirstName:@"Anakin"
                                                                     lastName:@"Skywalker"
                                                                        alias:@"DarthVader"
@@ -36,11 +34,12 @@
                                                                        photo:vaderImage];
     
     ////////////////////////////////////
-    //creamos el controlador
+    // creamos un controlador
     KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
     
-    //mostramos en pantalla
     
+    ////////////////////////////////////
+    //mostramos en pantalla
     [[self window] setRootViewController:charVC];
     
     

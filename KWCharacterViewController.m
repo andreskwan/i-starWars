@@ -11,8 +11,7 @@
 
 @implementation KWCharacterViewController
 
-
-//add a property to allowme to communitcate with the model
+//add a property to allow me to communitcate with the model
 -(id) initWithModel: (KWCharacterModel *) aModel
 {
     if (self = [super initWithNibName:nil

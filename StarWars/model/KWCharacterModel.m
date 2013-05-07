@@ -12,26 +12,26 @@
 
 #pragma mark - Class Methods
 +(id) characterModelWithFirstName: (NSString *) aFirstName
-               lastName: (NSString *) aLastName
-                  alias: (NSString *) anAlias
-               wikiPage: (NSURL *) aWikiPage
-              soundData: (NSData *) aSoundData
-                  photo: (UIImage *) aPhoto
+                         lastName: (NSString *) aLastName
+                            alias: (NSString *) anAlias
+                         wikiPage: (NSURL *) aWikiPage
+                        soundData: (NSData *) aSoundData
+                            photo: (UIImage *) aPhoto
 {
     return [[self alloc]initWithFirstName:aFirstName
-                          lastName:aLastName
-                             alias:anAlias
-                          wikiPage:aWikiPage
-                         soundData:aSoundData
-                             photo:aPhoto];
-
+                                 lastName:aLastName
+                                    alias:anAlias
+                                 wikiPage:aWikiPage
+                                soundData:aSoundData
+                                    photo:aPhoto];
+    
 }
 
 
 +(id) characterModelWithAlias: (NSString *) anAlias
-                wikiPage: (NSURL *) aWikiPage
-               soundData: (NSData *) aSoundData
-                   photo: (UIImage *) aPhoto
+                     wikiPage: (NSURL *) aWikiPage
+                    soundData: (NSData *) aSoundData
+                        photo: (UIImage *) aPhoto
 {
     return [[self alloc]initWithAlias:anAlias
                              wikiPage:aWikiPage
@@ -55,14 +55,14 @@
         _soundData = aSoundData;
         _photo     = aPhoto;
     }
-
+    
     return self;
 }
 
 -(id) initWithAlias: (NSString *) anAlias
-               wikiPage: (NSURL *) aWikiPage
-              soundData: (NSData *) aSoundData
-                  photo: (UIImage *) aPhoto
+           wikiPage: (NSURL *) aWikiPage
+          soundData: (NSData *) aSoundData
+              photo: (UIImage *) aPhoto
 {
     if (self = [super init]) {
         _firstName = nil;

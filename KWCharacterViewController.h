@@ -10,12 +10,11 @@
 #import "KWCharacterModel.h"
 #import "CafPlayer.h"
 
-
 @interface KWCharacterViewController : UIViewController
 
 @property (strong, nonatomic) KWCharacterModel   *model;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
-@property (strong, nonatomic) CafPlayer * player;
+@property (strong, nonatomic) CafPlayer          *player;
 
 -(id) initWithModel: (KWCharacterModel *) aModel;
 
