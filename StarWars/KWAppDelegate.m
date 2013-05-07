@@ -9,6 +9,7 @@
 #import "KWAppDelegate.h"
 #import "KWCharacterModel.h"
 #import "KWCharacterViewController.h"
+#import "KWWikiViewController.h"
 @implementation KWAppDelegate
 
 //method from the delegate
@@ -37,10 +38,11 @@
     // creamos un controlador
     KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
     
-    
+    KWWikiViewController * wikiVC = [[KWWikiViewController alloc]initWithModel:vader];
     ////////////////////////////////////
     //mostramos en pantalla
-    [[self window] setRootViewController:charVC];
+//    [[self window] setRootViewController:charVC];
+        [[self window] setRootViewController:wikiVC];
     
     
     self.window.backgroundColor = [UIColor orangeColor];
