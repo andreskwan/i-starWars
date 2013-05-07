@@ -28,25 +28,37 @@
     [self configureAppearance];
     
     ////////////////////////////////////
-    //modelo
+    // creamos el modelo
     KWCharactersModel *model = [[KWCharactersModel alloc]init];
     
     
     ////////////////////////////////////
-    // creamos un controlador
+    // creamos el controlador de tabla
     KWCharactersViewController *charsVC = [[KWCharactersViewController alloc]
                                            initWithStyle:UITableViewStylePlain
                                            model:model];
 
+    //creamos el controlador de personaje
+    KWCharacterViewController *charVC = [[KWCharacterViewController alloc]
+                                         initWithModel:[model imperialCharacterAtIndex:0]];
     
-    ////////////////////////////////////
-    //creamos el combinador
-    UINavigationController *navVC = [[UINavigationController alloc]init];
-    [navVC pushViewController:charsVC  animated:NO];
+    //creamos los navigations
+    UINavigationController *tableNav = [[UINavigationController alloc]init];
+    [tableNav pushViewController:charsVC animated:NO];
+    
+    UINavigationController *charNav = [[UINavigationController alloc]init];
+    [charNav pushViewController:charVC animated:YES];
+    
+    
+    //creamos el splitView
+    UISplitViewController *splitVC = [[UISplitViewController alloc]init];
+    splitVC.viewControllers = @[tableNav,charNav];
+    
+    
     
     ////////////////////////////////////
     //mostramos en pantalla
-    [[self window] setRootViewController:navVC];
+    [[self window] setRootViewController:splitVC];
     
     
     self.window.backgroundColor = [UIColor orangeColor];

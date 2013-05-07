@@ -10,7 +10,7 @@
 #import "KWCharacterModel.h"
 #import "CafPlayer.h"
 
-@interface KWCharacterViewController : UIViewController
+@interface KWCharacterViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) KWCharacterModel   *model;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;

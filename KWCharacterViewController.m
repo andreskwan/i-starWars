@@ -10,7 +10,7 @@
 #import "CafPlayer.h"
 #import "KWWikiViewController.h"
 
-@implementation KWCharacterViewController
+@implementation KWCharacterViewController 
 
 //add a property to allow me to communitcate with the model
 -(id) initWithModel: (KWCharacterModel *) aModel
@@ -46,5 +46,22 @@
 {
     KWWikiViewController * wikiVC = [[KWWikiViewController alloc] initWithModel:self.model];
     [self.navigationController pushViewController:wikiVC animated:YES];
+
+}
+
+#pragma mark - UISplitViewControllerDelegate
+-(void) splitViewController:(UISplitViewController *)svc
+     willHideViewController:(UIViewController *)aViewController
+          withBarButtonItem:(UIBarButtonItem *)barButtonItem
+       forPopoverController:(UIPopoverController *)pc
+{
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+}
+
+-(void)splitViewController:(UISplitViewController *)svc
+    willShowViewController:(UIViewController *)aViewController
+ invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    self.navigationItem.leftBarButtonItem = nil;
 }
 @end
