@@ -34,7 +34,7 @@
     //creamos el combinador
     UITabBarController *tabVC = [[UITabBarController alloc]init];
     tabVC.viewControllers = [self arrayOfCOntrollers];
-        
+            
     ////////////////////////////////////
     //mostramos en pantalla
     [[self window] setRootViewController:tabVC];
@@ -121,9 +121,9 @@
     ////////////////////////////////////
     //creamos modelo
     NSURL *chewieURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Chewbacca"];
-    NSData *chewieSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"c3po"
+    NSData *chewieSound = [NSData dataWithContentsOfURL:[[NSBundle mainBundle]URLForResource:@"chewie"
                                                                                withExtension:@"caf"]];
-    UIImage *chewieImage = [UIImage imageNamed:@"Chewbacca.jpg"];
+    UIImage *chewieImage = [UIImage imageNamed:@"chewbacca.jpg"];
     
     KWCharacterModel * chewie = [KWCharacterModel characterModelWithAlias:@"Chewbacca"
                                                                  wikiPage:chewieURL
@@ -141,7 +141,6 @@
                                                                     wikiPage:yodaURL
                                                                    soundData:yodaSound
                                                                        photo:yodaImage];
-    
     return @[vader,c3po,chewie,yoda];
     
     
@@ -156,8 +155,14 @@
     for (KWCharacterModel * model in models) {
         KWCharacterViewController *charVC = [[KWCharacterViewController alloc]initWithModel:model];
     
+        
+        //navigator
+        UINavigationController *navVC = [[UINavigationController alloc]init];
+        [navVC pushViewController:charVC
+                         animated:NO];
+
         //lo añado al array
-        [controllers addObject:charVC];
+        [controllers addObject:navVC];
     }
     return controllers;
     
