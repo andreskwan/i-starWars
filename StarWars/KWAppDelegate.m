@@ -16,10 +16,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
+    //////////////////////////////////////
+    // configurar appearance
+    [self configureAppearance];
     ////////////////////////////////////
     //creamos modelo
     NSURL *vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
@@ -37,9 +40,6 @@
     ////////////////////////////////////
     // creamos un controlador
     KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
-    
-//    KWWikiViewController * wikiVC = [[KWWikiViewController alloc]initWithModel:vader];
-  
     
     ////////////////////////////////////
     //creamos el combinador
@@ -88,4 +88,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Utilities
+-(void)configureAppearance
+{
+    UIColor *darkBlue = [UIColor colorWithRed:0
+                                        green:0
+                                         blue:0.15
+                                        alpha:1];
+    [[UINavigationBar appearance]setTintColor:darkBlue];
+    [[UIToolbar appearance]setTintColor:darkBlue];
+}
 @end
