@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "KWCharacterModel.h"
-@interface KWWikiViewController : UIViewController
+@interface KWWikiViewController : UIViewController<UIWebViewDelegate>
 @property (strong, nonatomic) KWCharacterModel *model;
 @property (weak,nonatomic) IBOutlet UIWebView *browser;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 -(id)initWithModel: (KWCharacterModel *) aModel;
 

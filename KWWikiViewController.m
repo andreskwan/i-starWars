@@ -14,7 +14,7 @@
 
 @implementation KWWikiViewController
 
-
+//el controlador puede ser delegado de varios, muchos jefes, pero un jefe solo un delegado
 -(id)initWithModel: (KWCharacterModel*) aModel
 {
     if (self = [super initWithNibName:nil bundle:nil]) {
@@ -25,7 +25,14 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    //informar que seremos el delegate
+    self.browser.delegate = self;
+    
     [self.browser loadRequest:[NSURLRequest requestWithURL:self.model.wikiPage]];
+    
+    
+    
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +53,42 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - UIWebViewDelegate
+//
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.activityView  stopAnimating];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [self.activityView stopAnimating];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Contacte con el administrador"
+                                                   message:[error localizedDescription]
+                                                  delegate:nil
+                                         cancelButtonTitle:nil
+                                         otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+-(BOOL)webView:(UIWebView *)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request
+navigationType:(UIWebViewNavigationType)navigationType
+{
+    if ((navigationType == UIWebViewNavigationTypeLinkClicked)||
+        (navigationType == UIWebViewNavigationTypeFormSubmitted)) {
+        
+
+        
+        
+        
+        return NO;
+    }else{
+        return YES;
+    }
 }
 
 @end

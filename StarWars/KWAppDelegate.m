@@ -36,7 +36,7 @@
     
     ////////////////////////////////////
     // creamos un controlador
-    KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
+//    KWCharacterViewController * charVC = [[KWCharacterViewController alloc] initWithModel:vader];
     
     KWWikiViewController * wikiVC = [[KWWikiViewController alloc]initWithModel:vader];
     ////////////////////////////////////
