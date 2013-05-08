@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "KWCharacterModel.h"
+#import "KWCharactersViewController.h"
+
 @interface KWWikiViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) KWCharacterModel *model;

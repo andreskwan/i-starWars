@@ -176,8 +176,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     if ([self.delegate respondsToSelector:@selector(charactersViewController:didSelectCharacter:)]) {
         [self.delegate charactersViewController:self
                              didSelectCharacter:character ];
-        [self.delegate performSelector:@selector(escapedPatternForString:) ];
+        //[self.delegate performSelector:@selector(escapedPatternForString:) ];
     }
+    
+    //enviamos la notificacion
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    NSNotification *notification = [NSNotification notificationWithName:CHARACTER_DID_CHANGE_NOTIFICATION
+                                                                 object:self
+                                                               userInfo:@{CHARACTER_KEY: character}];
+    
+    [nc postNotification:notification];
 }
 
 @end

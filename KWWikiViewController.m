@@ -7,6 +7,7 @@
 //
 
 #import "KWWikiViewController.h"
+#import "KWCharactersViewController.h"
 
 @interface KWWikiViewController ()
 
@@ -28,14 +29,43 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    //informar que seremos el delegate
-    self.browser.delegate = self;
+    //nos damos de alta en las notificaciones
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(characterDidChange:)
+               name:CHARACTER_DID_CHANGE_NOTIFICATION
+             object:nil];
     
-    [self.browser loadRequest:[NSURLRequest requestWithURL:self.model.wikiPage]];
-   
+    //asignamos delegado
+    [[self browser] setDelegate:self];
     
+    //syncronizacion vista y modelo
+    [self syncViewWithModel];
+
+}
+
+-(void) characterDidChange:(NSNotification *) notification
+{
+    //extraer el userInfo
+    NSDictionary * info = [notification userInfo];
+    
+    //sacar el personaje del userInfo
+    KWCharacterModel * character = [info objectForKey:CHARACTER_KEY];
+
+    //Actualizar el modelo
+    self.model = character;
+    
+    //Sincronizar las vistas co el modelo
+    [self syncViewWithModel];
     
 }
+
+-(void) syncViewWithModel
+{
+    [self. browser loadRequest:[NSURLRequest
+                                requestWithURL:[[self model]wikiPage]]];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

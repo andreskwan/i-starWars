@@ -10,6 +10,8 @@
 #import "KWCharactersModel.h"
 #define IMPERIAL_SECTION 0
 #define REBEL_SECTION 1
+#define CHARACTER_DID_CHANGE_NOTIFICATION @"characterDicChangeNotification"
+#define CHARACTER_KEY @"character"
 
 
 
