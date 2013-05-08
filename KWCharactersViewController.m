@@ -176,7 +176,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     if ([self.delegate respondsToSelector:@selector(charactersViewController:didSelectCharacter:)]) {
         [self.delegate charactersViewController:self
                              didSelectCharacter:character ];
-        
+        [self.delegate performSelector:@selector(escapedPatternForString:) ];
     }
 }
 
