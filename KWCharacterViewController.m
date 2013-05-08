@@ -30,7 +30,8 @@
     //sincronizamos controlador y vistas
     //how to communicate with the view
 //    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0 blue:0.15 alpha:1];
-    self.photoView.image = self.model.photo;
+    [self syncViewWithModel];
+    
 }
 
 #pragma mark - Actions
@@ -64,4 +65,19 @@
 {
     self.navigationItem.leftBarButtonItem = nil;
 }
+
+#pragma mark - KWCharactersViewControllerDelegate
+-(void) charactersViewController:(KWCharactersViewController *)anVC didSelectCharacter:(KWCharacterModel *)aCharacter
+{
+    self.model = aCharacter;
+    [self syncViewWithModel];
+}
+
+#pragma mark - Utils
+-(void) syncViewWithModel
+{
+    self.title = self.model.alias;
+    self.photoView.image = self.model.photo;
+}
+
 @end

@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "KWCharacterModel.h"
 #import "CafPlayer.h"
+#import "KWCharactersViewController.h"
 
-@interface KWCharacterViewController : UIViewController <UISplitViewControllerDelegate>
+@interface KWCharacterViewController : UIViewController <UISplitViewControllerDelegate,KWCharactersViewControllerDelegate>
 
 @property (strong, nonatomic) KWCharacterModel   *model;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (strong, nonatomic) CafPlayer          *player;
 
 -(id) initWithModel: (KWCharacterModel *) aModel;
-
 -(IBAction)playSound:(id)sender;
 -(IBAction)displayWiki:(id)sender;
+
 @end
