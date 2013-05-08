@@ -17,6 +17,8 @@
 
 //method from the delegate
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -26,6 +28,8 @@
     //////////////////////////////////////
     // configurar appearance
     [self configureAppearance];
+    
+    [self setDefaults];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         ////////////////////////////////////
@@ -82,9 +86,6 @@
         self.window.rootViewController = charsNav;
     }
     
-    
-    
-    
     self.window.backgroundColor = [UIColor orangeColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -129,6 +130,7 @@
                                         green:0
                                          blue:0.15
                                         alpha:1];
+    
     [[UINavigationBar appearance]setTintColor:darkBlue];
     
     [[UIToolbar appearance]setTintColor:darkBlue];
@@ -139,5 +141,22 @@
                                                 alpha:1];
     
     [[UITableViewHeaderFooterView appearance] setTintColor:reallyDarkerBlue];
+}
+
+-(void)setDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults objectForKey:LAST_SELECTED_CHARACTER]==nil) {
+        //primera vez que se llama la app
+        
+        //Guardamos un valor por defecto
+        //@{IMPERIAL_SECTION} para pasarlo a NSNumber
+        NSDictionary *coords = @{SECTION_KEY: @(IMPERIAL_SECTION), ROW_KEY: @0};
+        [defaults setObject:coords forKey:LAST_SELECTED_CHARACTER];
+        
+        //POR SI ACASO , GUARDAMOS
+        [defaults synchronize];
+    }
 }
 @end

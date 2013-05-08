@@ -68,14 +68,14 @@ titleForHeaderInSection:(NSInteger)section
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
     if (section == IMPERIAL_SECTION) {
         return self.model.imperialCount;
@@ -193,7 +193,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
               didSelectCharacter:(KWCharacterModel *)aCharacter
 {
     //crear un character VC
-    KWCharactersViewController *charVC = [[KWCharacterViewController alloc] initWithModel:aCharacter];
+    KWCharacterViewController *charVC = [[KWCharacterViewController alloc] initWithModel:aCharacter];
                                           
     [self.navigationController pushViewController:charVC animated:YES];
     

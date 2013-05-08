@@ -51,6 +51,7 @@
 		EA1EC70A1739800200EBBED7 /* KWCharactersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWCharactersModel.m; path = model/KWCharactersModel.m; sourceTree = "<group>"; };
 		EA1EC70C173987D100EBBED7 /* KWCharactersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWCharactersViewController.h; sourceTree = "<group>"; };
 		EA1EC70D173987D100EBBED7 /* KWCharactersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWCharactersViewController.m; sourceTree = "<group>"; };
+		EA1EC70F173AD79C00EBBED7 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		EA5A9F5A173830240059AC5E /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5A9F5D173830240059AC5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA5A9F5F173830240059AC5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +109,7 @@
 		EA5A9F51173830240059AC5E = {
 			isa = PBXGroup;
 			children = (
+				EA1EC70F173AD79C00EBBED7 /* Settings.h */,
 				EA5A9F63173830240059AC5E /* StarWars */,
 				EA5A9F5C173830240059AC5E /* Frameworks */,
 				EA5A9F5B173830240059AC5E /* Products */,
