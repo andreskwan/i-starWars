@@ -27,41 +27,62 @@
     // configurar appearance
     [self configureAppearance];
     
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        ////////////////////////////////////
+        // creamos el modelo
+        KWCharactersModel *model = [[KWCharactersModel alloc]init];
+        
+        
+        ////////////////////////////////////
+        // creamos el controlador de tabla
+        KWCharactersViewController *charsVC = [[KWCharactersViewController alloc]
+                                               initWithStyle:UITableViewStylePlain
+                                               model:model];
+        
+        //creamos el controlador de personaje
+        KWCharacterViewController *charVC = [[KWCharacterViewController alloc]
+                                             initWithModel:[model imperialCharacterAtIndex:0]];
+        
+        //creamos los navigations
+        UINavigationController *tableNav = [[UINavigationController alloc]init];
+        [tableNav pushViewController:charsVC animated:NO];
+        
+        UINavigationController *charNav = [[UINavigationController alloc]init];
+        [charNav pushViewController:charVC animated:YES];
+        
+        charsVC.delegate = charVC;
+        
+        //creamos el splitView
+        UISplitViewController *splitVC = [[UISplitViewController alloc]init];
+        splitVC.viewControllers = @[tableNav,charNav];
+        
+        //
+        splitVC.delegate = charVC;
+        
+        ////////////////////////////////////
+        //mostramos en pantalla
+        [[self window] setRootViewController:splitVC];
+    }else{
+        //pantalla tipo telefono
     
-    ////////////////////////////////////
-    // creamos el modelo
-    KWCharactersModel *model = [[KWCharactersModel alloc]init];
+        //creamos modelo
+        KWCharactersModel * model = [[KWCharactersModel alloc]init];
+        
+        //controlador de tabla
+        KWCharactersViewController *charsVC = [[KWCharactersViewController alloc] initWithStyle:UITableViewStylePlain model:model];
+        
+        //creamos el combinador
+        UINavigationController * charsNav = [[UINavigationController alloc]init];
+        [charsNav pushViewController:charsVC animated:NO];
+        
+        //asignamos delegados
+        charsVC.delegate = charsVC;
+        
+        //lo mostramos en pantalla
+        self.window.rootViewController = charsNav;
+    }
     
     
-    ////////////////////////////////////
-    // creamos el controlador de tabla
-    KWCharactersViewController *charsVC = [[KWCharactersViewController alloc]
-                                           initWithStyle:UITableViewStylePlain
-                                           model:model];
-
-    //creamos el controlador de personaje
-    KWCharacterViewController *charVC = [[KWCharacterViewController alloc]
-                                         initWithModel:[model imperialCharacterAtIndex:0]];
-    
-    //creamos los navigations
-    UINavigationController *tableNav = [[UINavigationController alloc]init];
-    [tableNav pushViewController:charsVC animated:NO];
-    
-    UINavigationController *charNav = [[UINavigationController alloc]init];
-    [charNav pushViewController:charVC animated:YES];
-    
-    charsVC.delegate = charVC;
-    
-    //creamos el splitView
-    UISplitViewController *splitVC = [[UISplitViewController alloc]init];
-    splitVC.viewControllers = @[tableNav,charNav];
-    
-    //
-    splitVC.delegate = charVC;
-    
-    ////////////////////////////////////
-    //mostramos en pantalla
-    [[self window] setRootViewController:splitVC];
     
     
     self.window.backgroundColor = [UIColor orangeColor];

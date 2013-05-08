@@ -67,7 +67,8 @@
 }
 
 #pragma mark - KWCharactersViewControllerDelegate
--(void) charactersViewController:(KWCharactersViewController *)anVC didSelectCharacter:(KWCharacterModel *)aCharacter
+-(void) charactersViewController:(KWCharactersViewController *)anVC
+              didSelectCharacter:(KWCharacterModel *)aCharacter
 {
     self.model = aCharacter;
     [self syncViewWithModel];

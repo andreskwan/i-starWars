@@ -23,7 +23,7 @@ didSelectCharacter:(KWCharacterModel *)aCharacter;
 
 @end
 
-@interface KWCharactersViewController : UITableViewController
+@interface KWCharactersViewController : UITableViewController <KWCharactersViewControllerDelegate>
 
 @property (strong, nonatomic) id<KWCharactersViewControllerDelegate> delegate;
 

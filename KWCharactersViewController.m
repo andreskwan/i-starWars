@@ -188,4 +188,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [nc postNotification:notification];
 }
 
+#pragma mark - KWCharactersViewControllerDelegate
+-(void) charactersViewController:(KWCharactersViewController *)anVC
+              didSelectCharacter:(KWCharacterModel *)aCharacter
+{
+    //crear un character VC
+    KWCharactersViewController *charVC = [[KWCharacterViewController alloc] initWithModel:aCharacter];
+                                          
+    [self.navigationController pushViewController:charVC animated:YES];
+    
+    
+}
+
+
 @end
