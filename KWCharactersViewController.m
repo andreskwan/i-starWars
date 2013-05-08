@@ -48,6 +48,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+//    [super viewWillAppear:animated];
+//    [self.tableView selectRowAtIndexPath:<#(NSIndexPath *)#> animated:<#(BOOL)#> scrollPosition:<#(UITableViewScrollPosition)#>]
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -198,6 +204,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [self.navigationController pushViewController:charVC animated:YES];
     
     
+}
+
+-(void) saveLastSelectedCharacter: (NSIndexPath * ) indexPath
+{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSDictionary * coord = @{SECTION_KEY: @(indexPath.section), ROW_KEY: @(indexPath.row)};
+    [def setObject:coord forKey:LAST_SELECTED_CHARACTER];
+    [def synchronize];
 }
 
 

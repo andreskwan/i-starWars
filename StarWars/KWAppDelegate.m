@@ -44,6 +44,20 @@
                                                model:model];
         
         //creamos el controlador de personaje
+        //obtenemos las coordenadas
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        NSDictionary *coords = [def objectForKey:LAST_SELECTED_CHARACTER];
+        int section = [[coords objectForKey:SECTION_KEY] intValue];
+        int row = [[coords objectForKey:ROW_KEY] intValue];
+        
+        //Obtenemos el ultimo personaje seleccionado
+        KWCharacterModel *character = nil;
+        if (section == IMPERIAL_SECTION) {
+            character = [model imperialCharacterAtIndex:row];
+        } else {
+            character = [model rebelCharacterAtIndex:row];
+        }
+        
         KWCharacterViewController *charVC = [[KWCharacterViewController alloc]
                                              initWithModel:[model imperialCharacterAtIndex:0]];
         
