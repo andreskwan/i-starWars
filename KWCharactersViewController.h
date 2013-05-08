@@ -11,6 +11,8 @@
 #define IMPERIAL_SECTION 0
 #define REBEL_SECTION 1
 
+
+
 @class KWCharactersViewController;
 @protocol KWCharactersViewControllerDelegate <NSObject>
 @optional
