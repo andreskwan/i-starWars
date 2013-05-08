@@ -20,6 +20,7 @@
     if (self = [super initWithNibName:nil bundle:nil]) {
         _model = aModel;
         self.title = @"Wiki";
+        
     }
     return self;
 }
@@ -31,7 +32,7 @@
     self.browser.delegate = self;
     
     [self.browser loadRequest:[NSURLRequest requestWithURL:self.model.wikiPage]];
-    
+   
     
     
 }
@@ -40,6 +41,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+          
     }
     return self;
 }
@@ -48,6 +50,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+  
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +64,8 @@
 //
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.activityView  stopAnimating];
+     [self.activityView  stopAnimating];
+//     [self.activityView  startAnimating];
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -79,6 +83,7 @@
 shouldStartLoadWithRequest:(NSURLRequest *)request
 navigationType:(UIWebViewNavigationType)navigationType
 {
+    
     if ((navigationType == UIWebViewNavigationTypeLinkClicked)||
         (navigationType == UIWebViewNavigationTypeFormSubmitted)) {
         

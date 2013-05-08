@@ -54,7 +54,8 @@
     UISplitViewController *splitVC = [[UISplitViewController alloc]init];
     splitVC.viewControllers = @[tableNav,charNav];
     
-    
+    //
+    splitVC.delegate = charVC;
     
     ////////////////////////////////////
     //mostramos en pantalla

@@ -32,6 +32,7 @@
     if (self) {
         // Custom initialization
         _model = aModel;
+        self.title = @"StarWars";
     }
     return self;
 }
