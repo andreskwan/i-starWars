@@ -62,8 +62,12 @@
 
 -(void) syncViewWithModel
 {
+    [self.activityView setHidden:NO];
+    [self.activityView startAnimating];
     [self. browser loadRequest:[NSURLRequest
                                 requestWithURL:[[self model]wikiPage]]];
+    
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -95,7 +99,7 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
      [self.activityView  stopAnimating];
-//     [self.activityView  startAnimating];
+     [self.activityView  setHidden:YES];
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

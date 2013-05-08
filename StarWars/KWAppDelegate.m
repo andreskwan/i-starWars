@@ -27,6 +27,7 @@
     // configurar appearance
     [self configureAppearance];
     
+    
     ////////////////////////////////////
     // creamos el modelo
     KWCharactersModel *model = [[KWCharactersModel alloc]init];
