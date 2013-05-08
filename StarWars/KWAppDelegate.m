@@ -49,6 +49,7 @@
     UINavigationController *charNav = [[UINavigationController alloc]init];
     [charNav pushViewController:charVC animated:YES];
     
+    charsVC.delegate = charVC;
     
     //creamos el splitView
     UISplitViewController *splitVC = [[UISplitViewController alloc]init];

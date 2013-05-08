@@ -157,6 +157,7 @@ titleForHeaderInSection:(NSInteger)section
 
 #pragma mark - Table view delegate
 
+
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -166,21 +167,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         character = [self.model imperialCharacterAtIndex:indexPath.row];
     } else {
         character = [self.model rebelCharacterAtIndex:indexPath.row];
-    
+        
     }
     
-    //creamos el controller
-    KWCharacterViewController *charVC = [[KWCharacterViewController alloc]initWithModel:character];
+    //avisamos al deldelgado
     
-    //hacemos el push
-    [self.navigationController pushViewController:charVC animated:YES];
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-      *detailViewController = [[ alloc] initWithNibName:@" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    //averiguamos si el delegado entiende el mensaje
+    if ([self.delegate respondsToSelector:@selector(charactersViewController:didSelectCharacter:)]) {
+        [self.delegate charactersViewController:self
+                             didSelectCharacter:character ];
+        
+    }
 }
 
 @end
